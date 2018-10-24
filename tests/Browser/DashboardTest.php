@@ -10,15 +10,15 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 class DashboardTest extends DuskTestCase
 {
     /**
-     * A basic browser test example.
+     * Dashboard Tests
      *
      * @return void
      * @throws \Throwable
      */
-    public function testBasicExample()
+    public function testDashboardDisplayedCorrectly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit(new DashboardPage())->assertSee('Dashboard');
+            $browser->visit(new DashboardPage());
         });
     }
 }

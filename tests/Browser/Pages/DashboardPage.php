@@ -24,7 +24,9 @@ class DashboardPage extends Page
      */
     public function assert(Browser $browser)
     {
-        //
+        $browser
+            ->assertSee('Dashboard')
+        ;
     }
 
     /**
