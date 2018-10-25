@@ -2,6 +2,7 @@
 
 namespace Tests\Browser;
 
+use App\Models\User;
 use Tests\Browser\Pages\DashboardPage;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
@@ -18,7 +19,7 @@ class DashboardTest extends DuskTestCase
     public function testDashboardDisplayedCorrectly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit(new DashboardPage());
+            $browser->loginAs(User::find(1))->visit(new DashboardPage());
         });
     }
 }
