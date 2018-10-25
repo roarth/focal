@@ -1,7 +1,7 @@
 @extends('layouts.application')
 
 @section('content')
-    <dashboard-component></dashboard-component>
+    Dashboard
     <br/>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
         Logout
